@@ -63,25 +63,3 @@ const { title } = Astro.props;
         }
     }
 </style>
-
-<script>
-    // *NavBar Functionality
-
-const hamb = document.querySelector('.hamburger');
-const navBar = document.querySelector('.navbar');
-const lastNav = document.querySelector('.last-nav');
-
-hamb.addEventListener('focus', () => {
-    navBar.classList.toggle('active')
-    hamb.classList.toggle('rotate90')
-});
-hamb.addEventListener('click', () => {
-    navBar.classList.toggle('active')
-    hamb.classList.toggle('rotate90')
-});
-lastNav.addEventListener('blur', () => {
-    navBar.classList.toggle('active')
-    hamb.classList.toggle('rotate90')
-});
-</script>
-
