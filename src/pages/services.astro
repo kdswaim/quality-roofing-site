@@ -1,0 +1,223 @@
+---
+import Layout from "../layouts/layout.astro";
+import Services from "../components/Services.astro";
+import Atlas from "../components/Atlas.astro";
+import WhyUsCollapsible from "../components/WhyUsCollapsible.astro";
+---
+<Layout title="Services | Quality Roofing Services in Terre Haute, IN | Local Roof Replacement & Repair">
+<main class="main" id="services">
+<section id="services-services">
+
+<div class="header-hero">
+    <h1 class="service-header">Services</h1>
+<img style="width:100%" src="/Backgrounds/why-us-bg.jpeg" alt="Roofers work as the sun sets.">
+</div>
+<div class="service-description" id="page-description">
+    <p>Everything you need to boost curb-appeal and improve the longevity of your home, all under one roof.
+    </p>
+</div>
+    <div class="service-card-container">
+    <Services />
+    <div class="btn-holder">
+    <button class="secondary-button" style="width:100%"><a href="/gallery">See Our Work</a></button>
+</div>
+    </div>
+</section>
+
+<section id="services-warranty">
+    <div id="warranty-container">
+        <div id="warranty-header-group">
+    <h2 class="light-lines">Built To Last</h2>
+    <div id="services-warranty-text">
+        <h4 style="color: white; text-shadow: 0rem 4rem 4rem 0rem;padding: 1rem 0 1rem 2rem;"><strong>Our standards set us apart.</strong></h4>
+        <p style="color: white; text-shadow: 0rem 4rem 4rem 0rem;padding-left:2rem;">When you choose Quality Roofing, you choose certified professionals held to the highest industry standards.</p>
+    </div>
+</div>
+<WhyUsCollapsible />
+</div>
+</section>
+
+<!-- Section - Atlas Brand & Colors -->
+ 
+<section id="Services-Atlas">
+    <Atlas />
+</section>
+
+<section id="Services-About">
+    <h2 class="dark-lines" style="padding: 2rem 0 1rem;">Choose Quality</h2>
+    <div class="choose-quality-image-container">
+    <img class="choose-quality-img" src="/Employees-Brand/choose-quality.jpg" alt="Two Quality Roofing trucks positioned in the company parking lot.">
+</div>
+    <div class="choose-quality-text">
+    <p><strong>Quality isn't about appearance, but a degree of excellence. </strong>
+</p>
+<p>Our roofs are beautiful and durable for many more years than traditional asphalt shingles, helping you save money over time. 
+</p>
+<p>We gladly offer no-obligation free quotes as well as lifetime warranties on our work and our products.
+</p>
+<p>We work with insurance companies and also offer financing. 
+</p>
+<p>Our estimates include siding and gutters. 
+</p>
+<p>Our experienced crew can help with any size residential or commercial roofing project in the Wabash Valley area.
+</p>
+</div>
+<div class="button-wrapper">
+<button class="secondary-button" style="width:100%;"><a href="/about">About Us</a></button>
+</div>
+</section>
+
+<section id="services-storm-damage">
+<h2 class="dark-lines" style="padding:">Storm Damage</h2>
+<div class="storm-content">
+<img class="storm-badge" src="/badges/Storm Damage Specialists.png" alt="Storm Damage Specialist badge - wind, hail, and rain.">
+<h4 style="padding-bottom: 1rem;"><strong>What to look for after a storm: </strong></h4>
+<dl class="storm-damage-signs">
+<dt>Missing Shingles:</dt>
+<dd>If you notice missing shingles, you want to pay attention to the granule buildup on your shingles as well as any early signs of damage.</dd>
+<dt>Damaged shingles:</dt>
+<dd>Hail storms will more than likely cause dings and dents in asphalt shingles and should be noted as well. </dd>
+<dt>Missing flashing:</dt>
+<dd>Do you see signs of any missing flashing along the edges of the roof and also along the skylights, vents, and chimneys?</dd>
+<dt>Loose sealant:</dt>
+<dd>Do you see any loose or peeling sealant along those same points?</dd>
+<dt>Water Damage:</dt>
+<dd>Is there any water damage in the attic or along the ceiling?</dd>
+</dl>
+<p>If you see any of these signs of damage, it's important to call us as soon as you notice these issues.</p>
+<p>Waiting to repair these minor issues can cause more damage later on. </p>
+<p>We will make your roof repair or replacement go as smoothly as possible from the initial inspection, working with your insurance, and finally the completion of your roof repair or replacement. 
+</p>
+<div class="call-us">
+<h4 class="call-now-head">Give Us a Call</h4>
+<p>If you need repair after high winds, hail, or any storm, give our storm specialists a call today at 812-870-0447.
+</p>
+</div>
+</div>
+</section>
+</main>
+</Layout>
+
+<style>
+    #services {
+        background-color: var(--color-heading);
+    }
+
+    .header-hero {
+        position: relative;
+        text-align: center;
+        max-height: 20rem;
+        overflow: hidden;
+}
+
+.service-header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: whitesmoke;
+        text-shadow: 0rem 4rem 4rem 0rem #000000;
+    }
+
+    /* Services & Cards */
+
+    #services-services {
+        text-align: center;
+    }
+
+    .service-card-container {
+        padding: 0rem 2rem 2rem 2rem;
+    }
+
+    .service-description {
+        padding-top: 1rem;
+        font-family: calistoga;
+        text-align: left;
+        color: #282828;
+    }
+
+    .btn-holder {
+        padding-top: 2rem;
+    }
+
+    /* Warranty Section */
+
+    #services-warranty {
+        background-image: url('/Backgrounds/IMG_0006.JPG');
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    #warranty-container {
+        backdrop-filter: brightness(30%);
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 2rem 0;
+    }
+
+    #warranty-header-group {
+        padding-top:1rem;
+    }
+
+    /* About Us blurb */
+
+    #Services-about {
+        padding: 2rem 1rem;
+    }
+
+    .choose-quality-img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+    }
+    
+    .choose-quality-image-container {
+        padding: 0rem 1rem;
+    }
+
+    .choose-quality-text {
+        padding-top: 1rem;
+    }
+
+    .button-wrapper {
+        text-align: center;
+        margin-bottom: 2rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Storm Damage Experts */
+
+    #services-storm-damage {
+        
+    }
+
+    .storm-content {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .storm-badge {
+        mix-blend-mode:difference;
+        margin-right:auto;
+        margin-left: auto;
+        padding-bottom: 1rem;
+        -webkit-filter: drop-shadow(5px 5px 5px #141414);
+        filter: drop-shadow(5px 5px 5px #141414);
+    }
+
+    .call-us {
+        background-color: var(--color-cta-btn);
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        margin: 0 auto;
+    }
+
+    .call-now-head {
+        padding: 1rem 1rem;
+        text-align:center;
+        color:white
+    }
+</style>

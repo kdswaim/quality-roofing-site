@@ -1,0 +1,153 @@
+---
+import Layout from "../layouts/layout.astro";
+import PicContainer from "../components/PicContainer.astro";
+---
+<Layout title="Gallery | Quality Roofing Services in Terre Haute, IN | Local Roof Replacement & Repair">
+<body>
+<main>
+
+<section id="Gallery">
+    <div class="header-hero">
+        <h1 class="gallery-header">Our Work</h1>
+    <img style="width:100%" src="/Gallery/gallery-cover.jpg" alt="Roofers work as the sun sets.">
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="description" style="padding:1rem 1rem;margin:0;text-align:left">
+            <p style="padding:0;margin:0;"><strong>Quality Roofing of Indiana has helped hundreds of homeowners</strong> boost their curb-appeal, protect their homes from the elements, and check off their home-improvement lists. <a href="/contact/">Contact Us</a> to see how we can help you, too.</p>
+        </div>
+
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/1_geodome_vigo_weatherwood.jpg"
+        locationTag="Vigo County"
+        shingleColor="Weathered Wood"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Weathered-Wood.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/2_vigo_majesticshake.jpg"
+        locationTag="Vigo County"
+        shingleColor="Majestic Shake"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Majestic-Shake.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/3_vigo_pinBlackShadow.jpg"
+        locationTag="Vigo County"
+        shingleColor="Black Shadow"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Black-Shadow.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/4_parke_pppewter.jpg"
+        locationTag="Parke County"
+        shingleColor="Pewter"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Pewter.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/5_clay_weatheredwood.jpg"
+        locationTag="Clay County"
+        shingleColor="Weathered Wood"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Weathered-Wood.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/6_vigo_morningharvest.jpg"
+        locationTag="Vigo County"
+        shingleColor="Morning Harvest"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Morning-Harvest.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/7_clay_ppewter.jpg"
+        locationTag="Clay County"
+        shingleColor="Pewter"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Pewter.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/8_vigo_majesticshake.jpg"
+        locationTag="Vigo County"
+        shingleColor="Majestic Shake"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Majestic-Shake.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/9_Kingman_burnthickory.jpg"
+        locationTag="Kingman, IN"
+        shingleColor="Burnt Hickory"
+        shingleSwatch="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Burnt-Hickory.jpg"
+        />
+    </div>
+        <div id="pic-container-holder">
+        <PicContainer 
+        galPic="/Gallery/10_vigo_heather.jpg"
+        locationTag="Vigo County"
+        shingleColor="Heather"
+        shingleSwatch="/Atlas/Pinnacle Impact/Impact_Heather-IR.jpg"
+        />
+        </div>
+
+    </div>
+    <div class="button-wrapper" style="padding: 1rem 1rem 0 1rem;">
+    <a href="/contact"><button class="cta-button" style="width: 100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Contact Us</button></a>
+</div>
+</section>
+</main>
+</body>
+</Layout>
+
+<style>
+    
+#Gallery {
+    background-color: whitesmoke;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.header-hero {
+    position: relative;
+        text-align: center;
+        overflow: hidden;
+        max-height: 20rem;
+}
+
+.gallery-header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: whitesmoke;
+        text-shadow: 0rem 4rem 4rem 0rem #000000;
+    }
+
+    .gallery-container {
+        display: flex;
+        gap: 0rem 2rem;
+        padding: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #pic-container-holder {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    a {
+        color: var(--color-cta-btn);
+    }
+    
+</style>

@@ -1,0 +1,58 @@
+---
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+    <div class="services-cards">
+      <ServiceCard
+        title="Roofing"
+        subtitle="Install | Replace | Repair"
+        description="Our roofs are beautiful and durable for many more years than traditional asphalt shingles, helping you save money over time."
+        backgroundImage="/ServiceCards_Areas/roofing.jpg"
+      />
+      <ServiceCard
+        title="Siding"
+        subtitle="Upgrade your home"
+        description="We are happy to upgrade the exterior of your home to be as durable and stylish as the new roof that covers it."
+        backgroundImage="/ServiceCards_Areas/sidingAlt.jpg"
+      />
+      <ServiceCard
+        title="Gutters"
+        subtitle="Protect your home"
+        description="Ensure the longevity of your roof and home by installing a seamless guttering system to show rainwater where to go."
+        backgroundImage="/ServiceCards_Areas/Gutters.jpg"
+      />
+    </div>
+
+    <style>
+  
+      /* Services */
+    
+      .services-section {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+    
+      .services-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+  
+      #service-button {
+        margin-top: 2rem;
+      }
+    
+
+@media screen and (min-width: 600px) {
+
+  .services-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+      
+  }
+
+</style>

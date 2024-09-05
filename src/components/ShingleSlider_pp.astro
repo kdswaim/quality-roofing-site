@@ -1,0 +1,268 @@
+---
+import ShingleCard from "./ShingleCard.astro";
+---
+<style>
+.slider-wrapper {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex column;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .slides-container {
+    height: 8rem;
+    display: flex;
+    gap: 0.5em;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    }
+
+    .slides-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-wrap {
+        height: 100%;
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+    .slides-container::after {
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .slides-container::before {
+        left: 0;
+    }
+
+    .arrows {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: baseline;
+    }
+
+    .slide-arrow {
+      border: none;
+      cursor: pointer;
+      transition: opacity 100ms;
+      display: inline-block;
+    background: rgba(245, 245, 245, 0.8);
+    border-radius: 50%;
+    padding: .25rem;
+}
+
+ #pp-slide-arrow-next { 
+  transform: rotate(180deg);
+} 
+</style>
+
+<div class="slider-wrapper">
+
+    <ul class="slides-container" id="pp-slides-container" role="list">
+        <li class="pp-card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Black Shadow"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Black-Shadow.jpg"
+        alt="Pinnacle Pristine Black Shadow"
+      />
+    </li>
+    <li class="card-wrap" role="listitem" tabindex="0">
+    <ShingleCard
+        colorName="Burnt Hickory"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Burnt-Hickory.jpg"
+        alt="Pinnacle Pristine Burnt Hickory"
+      />
+</li>
+<li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Coastal Granite"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Coastal-Granite.jpg "
+        alt="Pinnacle Pristine Coastal Granite"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Copper Canyon"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Copper-Canyon.jpg "
+        alt="Pinnacle Pristine Copper Canyon"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Hearthstone"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Hearthstone.jpg"
+        alt="Pinnacle Pristine Hearthstone"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Heatherblend"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Heatherblend.jpg"
+        alt="Pinnacle Pristine Heatherblend"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Majestic Shake"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Majestic-Shake.jpg"
+        alt="Pinnacle Pristine Majestic Shake"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Morning Harvest"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Morning-Harvest.jpg"
+        alt="Pinnacle Pristine Morning Harvest"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Oyster Shell"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Oyster-Shell.jpg "
+        alt="Pinnacle Pristine Oyster Shell"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Pewter"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Pewter.jpg"
+        alt="Pinnacle Pristine Pewter"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Summer Storm"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Summer-Storm.jpg"
+        alt="Pinnacle Pristine Summer Storm"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Sunset"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Sunset.jpg"
+        alt="Pinnacle Pristine Sunset"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Tan Mist"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Tan-Mist.jpg"
+        alt="Pinnacle Pristine Tan Mist"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Weathered Shadow"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Weathered-Shadow.jpg"
+        alt="Pinnacle Pristine Weathered Shadow"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Weathered Wood"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Weathered-Wood.jpg"
+        alt="Pinnacle Pristine Weathered Wood"
+      />
+    </li>
+      <li class="card-wrap" role="listitem" tabindex="0">
+      <ShingleCard
+        colorName="Woodland Green"
+        backgroundImage="/Atlas/Pinnacle Pristine/Pinnacle-Pristine-Woodland-Green.jpg"
+        alt="Pinnacle Pristine Woodland Green"
+      />
+      </li>
+</ul>
+
+<div class="arrows">
+<button class="slide-arrow" id="pp-slide-arrow-prev" tabindex="0" aria-label="Previous Slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 1024 1024"><path fill="#282828" d="M529.408 149.376a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L259.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L197.76 534.272a32 32 0 0 1 0-44.672zm256 0a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L515.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L453.76 534.272a32 32 0 0 1 0-44.672z"/></svg>
+  </button>
+  
+<button class="slide-arrow" id="pp-slide-arrow-next" tabindex="0" aria-label="Next Slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 1024 1024"><path fill="#282828" d="M529.408 149.376a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L259.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L197.76 534.272a32 32 0 0 1 0-44.672zm256 0a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L515.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L453.76 534.272a32 32 0 0 1 0-44.672z"/></svg>
+  </button>
+</div>
+</div>
+
+<script>
+  
+  const slidesContainer = document.getElementById("pp-slides-container");
+  const slide = document.querySelector(".pp-card-wrap");
+  const prevButton = document.getElementById("pp-slide-arrow-prev");
+  const nextButton = document.getElementById("pp-slide-arrow-next");
+  
+  nextButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+  });
+  
+  prevButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  });
+  
+  // touch-navigation
+  
+  let startX;
+  let isSwiping = false;
+  
+  slidesContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+  
+  slidesContainer.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+      const touch = e.touches[0];
+    const diffX = startX - touch.clientX;
+    const deltaX = touch.clientX - startX;
+  
+    if (Math.abs(deltaX) > 10) {
+      e.preventDefault();
+    }
+  
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        slidesContainer.scrollLeft += slide.clientWidth;
+      } else {
+        slidesContainer.scrollLeft -= slide.clientWidth;
+      }
+    }
+  });
+  
+  slidesContainer.addEventListener('touchend', (e) => {
+    if (!isSwiping) return;
+    isSwiping = false;
+  
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+  
+    // Determine swipe direction
+    if (deltaX > 50) {
+      // Swipe Right
+      prevButton.click();
+    } else if (deltaX < -50) {
+      // Swipe Left
+      nextButton.click();
+    }
+  });
+  
+  //automatic focus management
+  
+  slidesContainer.addEventListener('focus', () => {
+      slide[0].focus();
+  }, {once:true });
+  
+  slidesContainer.addEventListener('blur', (e) => {       
+  }, true);
+  
+  </script> 

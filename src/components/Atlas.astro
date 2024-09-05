@@ -1,0 +1,159 @@
+---
+import ShingleSliderPi from "./ShingleSlider_pi.astro"
+import ShingleSliderSs from "./ShingleSlider_ss.astro"
+import ShingleSliderPs from "./ShingleSlider_ps.astro"
+import ShingleSliderPp from "./ShingleSlider_pp.astro"
+---
+
+<div class="component-wrapper">
+  <div class="atlas-header-group" id="header-container">
+    <div class="atlas-header-both" id="atlas-header">
+    <h2 class="atlas-header-top" style="font-family:calistoga">
+        Quality Options</h2>
+        <h4 class="atlas-header-bottom"> with</h4> 
+      </div>
+        <div class="atlas-logo" id="atlas-header">
+        <img
+        src="/Logos/Atlas_Corporate_Logo.jpg"
+        alt="Atlas Logo"
+        class="atlas-logo"
+        />
+      </div>
+  </div>
+
+  <!-- Pinnacle Pristine versions -->
+  <div class="product-line">
+    <div class="header">
+      <img
+        src="/Atlas/Pinnacle Pristine/Pinnacle_Pristine_Logo_Homeowner.jpg"
+        alt="Pinnacle Pristine with Scotchgard"
+        class="product-line"
+      />
+    </div>
+    <div id="pinnaclePristine" class="atlasContent">
+<ShingleSliderPp />
+    </div>
+  </div> 
+
+<!-- StormMaster Shake versions -->
+<div class="product-line">
+  <div class="header">
+    <img
+      src="/Atlas/StormMaster/StormMaster_Shake_Logo_Homeowner.jpg"
+      alt="StormMaster Shake with Scotchgard"
+      class="product-line"
+    />
+  </div>
+     <div id="stormMasterShake" class="atlasContent">
+          <ShingleSliderSs />
+</div>
+
+<!-- Pinnacle Impact versions -->
+<div class="product-line">
+  <div class="header">
+    <img
+      src="/Atlas/Pinnacle Impact/LOGO-Pinnacle-Impact-BL.png"
+      alt="Pinnacle Impact with Scotchgard"
+      class="product-line"
+    />
+  </div>
+<div id="pinnacleImpact" class="atlasContent">
+          <ShingleSliderPi/>
+</div>
+
+<!-- Pinnacle Sun versions -->
+<div class="product-line">
+<div class="header">
+  <img
+    src="/Atlas/Pinnacle Sun/LOGO-Pinnacle-Sun-BL.png"
+    alt="Pinnacle Sun with Scotchgard"
+    class="product-line"
+  />
+</div>
+<div id="pinnacleSun" class="atlasContent">
+        <ShingleSliderPs />
+</div>
+
+<!-- Atlas disclaimer -->
+<p class="atlas-disclaimer">
+    As an independent contractor, we are proud to use and recommend Atlas Roofing products.
+    <!-- An Independent contractor, not an Employee or Agent of Atlas Roofing
+    Corporation. -->
+  </p>
+
+  <button
+  class="secondary-button"
+  id="atlas-button"
+  style="margin: 0 2rem;"
+  onclick="window.open('https://www.atlasroofing.com', '_blank')"
+  >Start Designing on atlasroofing.com</button>
+
+  </div>
+
+<style>
+
+.component-wrapper {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .atlas-header-group {
+      margin: 0 1rem;
+      padding-top: 2rem;
+  }
+
+  #header-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  #atlas-header {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+      .atlas-header-both{
+      color: #282828;
+      line-height: 1.75rem;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+
+    .atlas-header-bottom {
+      font-weight: 400;
+    }
+    .atlas-header-top {
+      text-align: right;
+    }
+    .atlas-logo {
+      width: auto;
+      height: 5rem;
+    }
+
+    img.product-line {
+      width: auto;
+      height: 5rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    .cta-button, .atlas-disclaimer {
+      text-align: center;
+    }
+
+    .atlas-disclaimer {
+      font-size: 0.8rem;
+      padding-top: 1rem;
+    }
+
+    .card-list {
+      display: flex;
+    }
+  </style>

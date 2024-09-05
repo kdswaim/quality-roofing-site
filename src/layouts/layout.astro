@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+import '../styles/responsive.css';
+import Footer from '../components/Footer.astro';
+import MobileHeader from '../components/MobileHeader.astro';
+import DesktopHeader from '../components/DesktopHeader.astro';
+import DesktopHero from '../components/DesktopHero.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <!--Heading Font: Calistoga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet" />
+    <!--Secondary Font: IBM Plex Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!--tab icon and seo info -->
+    <link rel="icon" type="image/svg+xml" href="Logos/qr-favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <body>
+        <div id="mobile-holder">
+        <MobileHeader/>
+    </div>
+    <div id="desktop-holder">
+        <DesktopHeader/>
+    </div>
+        <main class="main-content" id="main">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style>
+    /* RESET MIN to links fitting */
+    @media screen and (min-width: 800px) {
+        #mobile-holder {
+            display: none;
+        }
+        #desktop-holder {
+            display: contents;
+        }
+    }
+
+    @media screen and (max-width: 799px) {
+        #mobile-holder {
+            display: contents;
+        }
+        #desktop-holder {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    // *NavBar Functionality
+
+const hamb = document.querySelector('.hamburger');
+const navBar = document.querySelector('.navbar');
+const lastNav = document.querySelector('.last-nav');
+
+hamb.addEventListener('focus', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+hamb.addEventListener('click', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+lastNav.addEventListener('blur', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+</script>
+

@@ -1,0 +1,117 @@
+<div class="collapsible-container">
+    <button type="button" class="collapsible">Licensed, Insured, and Bonded</button>
+    <div class="content">
+      <p>Trust certified professionals to deliver the highest standard of work for your roofing project.</p>
+    </div>
+</div>
+<div class="collapsible-container">
+  <button type="button" class="collapsible">The Local Advantage</button>
+  <div class="content">
+    <p>Locally-owned and family-operated, more than 50 years of experience.</p>
+  </div>
+</div>
+<div class="collapsible-container">
+    <button type="button" class="collapsible">Limited Lifetime Warranty</button>
+    <div class="content">
+      <p>Atlas Roofing shingles are protected by a limited lifetime manufacturer's warranty.</p>
+    </div>
+  </div>
+  <div class="collapsible-container">
+    <button type="button" class="collapsible">Lifetime Workmanship Warranty</button>
+    <div class="content">
+      <p>We double your protections with our own lifetime workmanship warranty, covering supporting materials in addition to shingles.</p>
+    </div>
+  </div>
+  <div class="collapsible-container">
+    <button type="button" class="collapsible">Atlas Pro&trade; Plus Gold Level Roofers</button>
+    <div class="content">
+      <p>Not just any shingle will do. Our unparalleled service comes backed by Atlas Roofing’s superb products and protection.</p>
+    </div>
+  </div>
+    <div class="collapsible-container">
+    <button type="button" class="collapsible">Insurance Claim Assistance</button>
+    <div class="content">
+      <p>Skip the headache - we'll work with your insurance company to submit your claim so you can focus on what really matters.</p>
+    </div>
+</div>
+<!-- <div class="collapsible-container">
+    <button type="button" class="collapsible">Financing</button>
+    <div class="content">
+      <p>We work with local banks to help increase your financial flexibility and choose a payment plan that works for you.</p>
+    </div>
+  </div> -->
+  </div>
+
+  <style>
+      .collapsible-container {
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+    background-color: rgba(245, 245, 245, 0.8);
+    transition: background 0.3s, box-shadow 0.3s;
+    margin: 1rem 2rem;
+  }
+
+  .collapsible-container:hover {
+    background-color: rgba(245, 245, 245, 0.9);
+  }
+
+  button.collapsible {
+    background: none;
+    /* color: white; */
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-bg);
+  }
+
+  .collapsible:after {
+    content: url('/icons/ic--baseline-plus.svg');
+    float: right;
+    color: transparent;
+    background-blend-mode: exclusion;
+  }
+
+  button.collapsible, button.collapsible:after {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    text-align: left;
+  }
+
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const coll = document.getElementsByClassName('collapsible');
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          const allContents = document.querySelectorAll('.content');
+          allContents.forEach(c => c.style.maxHeight = null);
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    }
+  });
+  
+</script>

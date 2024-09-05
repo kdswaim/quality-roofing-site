@@ -1,16 +1,107 @@
 ---
-
+import Layout from "../layouts/layout.astro";
+import Hero from "../components/Hero.astro";
+import LandingForm from "../components/LandingForm.astro";
+import Services from "../components/Services.astro";
+import Atlas from "../components/Atlas.astro";
+import WhyUsSection from "../components/WhyUsSection.astro";
+import DesktopHero from "../components/DesktopHero.astro";
+import DanTheRoofingMan from "../components/DanTheRoofingMan.astro";
+import WhyUsCollapsible from "../components/WhyUsCollapsible.astro";
+import "../styles/responsive.css";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Quality Roofing Services in Terre Haute, IN | Local Roof Replacement & Repair"
+>
+  <main class="main" id="main">
+
+    <section class="hero">
+    <Hero />
+  </section>
+
+    <section class="landing-form">
+      <div class="form-wrapper">
+      <LandingForm />
+    </div>
+  </section>
+
+  <section id="desktop-hero-form-view">
+    <DesktopHero />
+  </section>
+
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <h2 class="dark-lines" id="service-header">Skilled & Courteous</h2>
+      <div class="service-container">
+    <Services />
+    <a href="/services" id="service-button-padding"><button class="secondary-button" id="service-button">View Our Services</button></a>
+  </div>
+    </section>
+
+    <!-- ATLAS ROOFING SECTION -->
+
+    <section class="atlas-section">
+    <Atlas />
+    </section>
+
+<!-- WHY US SECTION -->
+
+<section class="quality-section">
+  <div class="quality-content">
+<WhyUsSection />
+</div>
+</section>
+
+<section aria-label="About Us" id="desktop-whyus-dan-view">
+    <div class="whyus-dan-container">
+  <div class="whyus-comp-contain">
+    <h2 class="desktop-q-header">Choose Quality</h2>
+    <p class="desktop-quality-description"><strong>Our qualified team has over 50 years of experience.</strong><br/>Quality Roofing of Indiana, LLC is a local family-owned and operated roofing company ready to help with your next residential or commercial roofing project.</p>
+    <WhyUsCollapsible/>
+  </div>
+  <div class="desktop-dan-container">
+<DanTheRoofingMan/>
+</div>
+</div>
+</section>
+
+<!-- SECTION: Dan -->
+
+<section id="meet-dan">
+<DanTheRoofingMan/>
+</section>
+
+<!-- SECTION: Before & After -->
+
+<section class="before-after-gallery">
+  <div class="before-after-container">
+<h2 class="dark-lines" id="before-after-header">A Real Difference</h2>
+<div id="widget-container">
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-52ea9985-ee70-48dc-8cf9-eca820b0bdb5" data-elfsight-app-lazy></div>
+</div>
+  <div id="fu-guys">
+  <a href="gallery"><button class="secondary-button" id="slider-btn">See Gallery</button></a>
+</div>
+</div>
+</section>
+
+<!-- SECTION: REVIEWS -->
+
+<section class="reviews">
+  <h2 class="review-header">Homeowner-Approved</h2>
+  <div id="widget-container"> <!-- Remove when built -->
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-8acd8bad-daa6-40ef-ae31-47ac871e9fb8" data-elfsight-app-lazy >
+    </div>
+  </div>
+  <div id="fu-guys-gr">
+  <a href="/contact"><button class="cta-button" id="btn-reviews">Give Us A Call</button></a>
+</div>
+</section>
+
+</main>
+</Layout>

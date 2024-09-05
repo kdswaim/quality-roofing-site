@@ -1,0 +1,393 @@
+/* *GLOBAL MEDIA QUERIES */
+
+@media screen and (min-width: 400px) {
+  .hero-head-main {
+    font-size: var(--step-3);
+    margin: 0 0 -1rem 0;
+    padding: 0;
+}
+    .hero-head-sub {
+        font-size:var(--step-3);
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+/* footer */
+
+.about-mini {
+  padding: 2rem;
+}
+
+  .quality-description p {
+    font-size: 1rem;
+}
+
+#legal-links {
+  padding-bottom: 1rem!important;
+}
+
+}/* End 480px */
+
+
+@media screen and (min-width: 520px) {
+  
+/* Index */
+/* Landing Form */
+
+    .form-wrapper {
+      padding: 0 5rem 4rem 5rem;
+    }
+    
+
+    /* Index/ Services */
+    /* ServiceCard Component */
+
+    .services-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      overflow: hidden;
+      height:auto;
+      width: 5rem;
+      text-align: center;
+      filter: saturate(1);
+      object-fit: cover;
+    }
+
+    #service-button {
+      max-width: 20rem;
+    }
+
+    /* Index/Atlas */
+
+  #atlas-button {
+    width: 20rem;
+  }
+
+/* Index/WhyUs */
+
+.quality-content {
+  padding: 4rem 0;
+}
+.whyus-container {
+width: 100%;
+}
+  .whyus-content-container {
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+
+/* Index/ Daniel */
+
+#meet-dan {
+  padding: 4rem;
+}
+.dan-bio {
+  padding: 0 2rem;
+}
+
+/* Index/Slider */
+
+#slider-btn {
+  width: 20rem;
+}
+
+/* Index/ Reviews*/
+
+.reviews {
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+#btn-reviews {
+  width: 20rem;
+}
+
+} /* end 520px */
+
+@media screen and (min-width: 600px) {
+
+  /* Hero */
+
+  .hero-head-main {
+    font-size: var(--step-3)!important;
+    margin: 0 0 -1rem 0;
+    padding: 0;
+}
+    .hero-head-sub {
+        font-size:var(--step-3)!important;
+        margin: 0;
+        padding: 0;
+    }
+
+/* Index/Services */
+
+.services-section {
+  padding: 2rem 0;
+}
+
+#service-header {
+  padding-bottom: 1rem;
+}
+
+.services-cards {
+  display: flex;
+  flex-flow: row wrap!important;
+  justify-content: center;
+  align-items: stretch!important;
+}
+
+.card {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+}
+
+.service-card-wrapper {
+  max-width:15rem!important; 
+}
+
+.overlay {
+  align-items: baseline!important;
+}
+
+#service-button-padding {
+  padding-top: 2rem!important;
+}
+
+/* Atlas */
+
+#atlas-header {
+  width:auto!important;
+}
+
+#header-container {
+  justify-content:end!important;
+}
+
+#atlas-button {
+  margin-top: 2rem!important;
+  margin-bottom: 1rem!important;
+}
+
+} /* End 600px */
+
+@media screen and (min-width: 700px) {
+  /* Services Page */
+.call-us {
+  background-color: whitesmoke!important;
+        border-radius: 0px!important;
+        box-shadow: none!important;
+        margin-top: 1rem;
+        margin: 0 auto;
+}
+
+.call-now-head {
+  color: var(--color-cta-btn)!important;
+  text-transform: uppercase;
+}
+}/* end 700px */
+
+@media screen and (min-width: 800px) {
+
+.company-container {
+    display: flex;
+    gap: 1rem 0!important;
+    flex-flow: row wrap!important;
+    padding: 1rem!important;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-holder {
+    width: 21rem!important;
+    margin: 0;
+    justify-content: center!important;
+    display: flex;
+}
+
+.company {
+    margin: 0!important;
+    border-radius: 1rem!important;
+    width: 20rem;
+}
+
+}/* end 800px */
+
+@media screen and (min-width: 1020px) {
+
+/* Hero/Landing Form */
+
+.hero, .landing-form {
+  display: none;
+}
+
+#desktop-hero-form-view {
+  display: block;
+}
+
+    .contact-form-desktop {
+      margin: 0 auto;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 0 1rem 2rem;
+      background: linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.801), rgba(20, 20, 20, 0.247),rgba(10, 10, 10, 0));
+      display: flex;
+      justify-content: center;
+    }
+
+    .badge p {
+      font-size: var(--step-0)!important;
+      max-width: 15rem;
+    }
+
+    /* Atlas */
+
+#header-container {
+  /* display: flex; */
+  justify-content: center!important;
+  /* gap: 0.5rem; */
+  align-items: center!important;
+}
+
+#pinnaclePristine, #stormMasterShake, #pinnacleImpact, #pinnacleSun {
+  max-width: 50rem!important;
+}
+
+.component-wrapper {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  }
+
+  /* Why Us / Dan */
+  /* Why Us */
+
+  #desktop-whyus-dan-view {
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .whyus-dan-container {
+    display: flex!important;
+    flex-direction: row!important;
+    padding-top: 2rem;
+  }
+
+  .dan-header {
+    display: none;
+  }
+
+  .whyus-comp-container {
+    padding: 1rem 0;
+  }
+
+  .whyus-container {
+    padding: 1rem;
+  }
+
+  .quality-section,#meet-dan {
+    display: none;
+  }
+
+  #dan-container {
+    background-color:white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .desktop-q-header {
+    padding-bottom: 1rem!important;
+  }
+  
+  .collapsible-container {
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+    background-color: rgba(245, 245, 245, 0.8);
+    transition: background 0.3s, box-shadow 0.3s;
+    margin: 1rem 2rem;
+  }
+
+  .collapsible-container:hover {
+    background-color: white!important;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-head {
+    text-align: left;
+  }
+
+  .biz-info-and-companies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .biz-info {
+    font-size: 1rem;
+  }
+
+  .quality-description p {
+    display: none;
+  }
+
+  .quality-companies {
+    padding-bottom: 0!important;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 1rem 0!important;
+    width: auto!important;
+    min-width: 20rem!important;
+  }
+
+  /* Services Page */
+
+  .service-description {
+    padding: 2rem 1rem!important;
+    text-align: center!important;
+  }
+
+  /* County Pages */
+
+  .location-header {
+    background-blend-mode:exclusion;
+    backdrop-filter: brightness(60%);
+    padding: 1rem 0;
+  }
+
+} /* end 1020px */

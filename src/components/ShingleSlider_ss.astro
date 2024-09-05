@@ -1,0 +1,221 @@
+---
+import ShingleCard from "./ShingleCard.astro";
+---
+<style>
+.slider-wrapper {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex column;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .slides-container {
+    height: 8rem;
+    display: flex;
+    gap: 0.5em;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    
+    }
+
+    .slides-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-wrap {
+        height: 100%;
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+    .slides-container::after {
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .slides-container::before {
+        left: 0;
+    }
+
+    .arrows {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: baseline;
+    }
+
+    .slide-arrow {
+    border: none;
+    cursor: pointer;
+    transition: opacity 100ms;
+    display: inline-block;
+    background: rgba(245, 245, 245, 0.8);
+    border-radius: 50%;
+    padding: .25rem;
+}
+
+ #ss-slide-arrow-next { 
+  transform: rotate(180deg);
+} 
+</style>
+
+
+<div class="slider-wrapper">
+
+    <ul class="slides-container" id="ss-slides-container" role="list">
+      <li class="ss-card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Aspen Grove"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Aspen-Grove.jpg"
+    alt="StormMaster Shake Aspen Grove"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Black Shadow"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Black-Shadow_2024-03-01-184325_hbqx.jpg"
+    alt="StormMaster Shake Black Shadow"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Copper Canyon"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Copper-Canyon_2024-03-01-184347_inhj.jpg"
+    alt="StormMaster Shake Copper Canyon"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Grand Teton"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Grand-Teton.jpg"
+    alt="StormMaster Shake Grand Teton"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Midnight Lake"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Midnight-Lake.jpg"
+    alt="StormMaster Shake Midnight Lake"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Moonlight Beach"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Moonlight-Beach.jpg"
+    alt="StormMaster Shake Moonlight Beach"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Morning Harvest"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Morning-Harvest_2024-03-01-184427_vdrt.jpg"
+    alt="StormMaster Shake Morning Harvest"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Pewter"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Pewter_2024-03-01-184446_mddn.jpg"
+    alt="StormMaster Shake Pewter"
+  />
+</li>
+  <li class="card-wrap" role="listitem" tabindex="0">
+  <ShingleCard
+    colorName="Weathered Wood"
+    backgroundImage="/Atlas/StormMaster/StormMaster-Shake-Weathered-Wood_2024-03-01-184457_ukyx.jpg"
+    alt="StormMaster Shake Weathered Wood"
+  />
+  </li>
+  </ul>
+
+<div class="arrows">
+<button class="slide-arrow" id="ss-slide-arrow-prev" tabindex="0" aria-label="Previous Slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 1024 1024"><path fill="#282828" d="M529.408 149.376a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L259.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L197.76 534.272a32 32 0 0 1 0-44.672zm256 0a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L515.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L453.76 534.272a32 32 0 0 1 0-44.672z"/></svg>
+  </button>
+  
+<button class="slide-arrow" id="ss-slide-arrow-next" tabindex="0" aria-label="Next Slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 1024 1024"><path fill="#282828" d="M529.408 149.376a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L259.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L197.76 534.272a32 32 0 0 1 0-44.672zm256 0a29.12 29.12 0 0 1 41.728 0a30.59 30.59 0 0 1 0 42.688L515.264 511.936l311.872 319.936a30.59 30.59 0 0 1-.512 43.264a29.12 29.12 0 0 1-41.216-.512L453.76 534.272a32 32 0 0 1 0-44.672z"/></svg>
+  </button>
+</div>
+</div>
+  
+  <script type="module">
+  
+  const slidesContainer = document.getElementById("ss-slides-container");
+  const slide = document.querySelector(".ss-card-wrap");
+  const prevButton = document.getElementById("ss-slide-arrow-prev");
+  const nextButton = document.getElementById("ss-slide-arrow-next");
+  
+  nextButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+  });
+  
+  prevButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  });
+  
+  // touch-navigation
+  
+  let startX;
+  let isSwiping = false;
+  
+  slidesContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+  
+  slidesContainer.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+      const touch = e.touches[0];
+    const diffX = startX - touch.clientX;
+    const deltaX = touch.clientx - startX;
+  
+    if (Math.abs(deltaX) > 10) {
+      e.preventDefault();
+    }
+  
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        slidesContainer.scrollLeft += slide.clientWidth;
+      } else {
+        slidesContainer.scrollLeft -= slide.clientWidth;
+      }
+    }
+  });
+  
+  slidesContainer.addEventListener('touchend', (e) => {
+    if (!isSwiping) return;
+    isSwiping = false;
+  
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+  
+    // Determine swipe direction
+    if (deltaX > 50) {
+      // Swipe Right
+      prevButton.click();
+    } else if (deltaX < -50) {
+      // Swipe Left
+      nextButton.click();
+    }
+  });
+  
+  //automatic focus management
+  
+  slidesContainer.addEventListener('focus', () => {
+      slide[0].focus();
+  }, {once:true });
+  
+  slidesContainer.addEventListener('blur', (e) => {       
+  }, true);
+  
+  </script> 

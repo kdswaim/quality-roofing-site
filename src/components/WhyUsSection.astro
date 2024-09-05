@@ -1,0 +1,38 @@
+---
+import WhyUsCollapsible from "./WhyUsCollapsible.astro"
+---
+
+<div class="whyus-container">
+    <h2 class="light-lines" id="quality-header">Quality Is Our Promise</h2>
+    <div class="whyus-content-container">
+    <p class="quality-description"><strong>Our qualified team has over 50 years of experience.</strong> <br/>Quality Roofing of Indiana, LLC is a local family-owned and operated roofing company ready to help with your next residential or commercial roofing project.</p>
+    <WhyUsCollapsible />
+    <div class="button-div">
+      <button class="cta-button" style="width: 100%" onclick="window.location.href='/contact'">Contact Us</button>
+    </div>
+  </div>
+  </div>
+
+  <style>
+
+.whyus-container {
+  text-align: center!important;
+}
+  
+    #quality-header, .quality-description {
+      padding-bottom: 2rem;
+    }
+  
+    .quality-description {
+      padding: 1rem;
+      background-color: rgba(245, 245, 245, 0.9);
+      border-radius: 10px;
+      margin: 0 2rem;
+      text-align: left;
+    }
+  
+    .button-div {
+      text-align: center;
+      margin: 0 2rem;
+    }
+    </style>

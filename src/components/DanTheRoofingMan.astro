@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+---
+<div id="dan-container">
+<h2 class="dan-header">Dan the Roofing Man</h2> 
+<div class="pic-container">
+<img src="/Employees-Brand/Dan.jpg" alt="Dan Hazzard" class="dan-pic"> 
+</div>
+<div class="d-tails">
+<h4 class="dan-name">Dan Hazzard</h4><p class="dan-position">Sales Manager</p>
+</div> 
+<p class="dan-bio"> 
+  With over <span id="years-experience">32</span> years of construction experience, Dan Hazzard excels in treating customers like family. </br> 
+  His knowledge and friendly demeanor ensure that every client receives a quality roof at a fair price. </br>
+  Outside of work, Dan enjoys antique tractors, hunting, fishing, and spending time with his family and his Bernedoodle, <a href="src/images/pupper-dupper-mcDoggerino.jpeg" target="_blank" class="link-to-dodger-pic">Dodger</a>.
+</p>
+<div class="contact-icons">
+</div>
+<div class="dan-buttons">
+<button class="cta-button" id="btn-dan" onclick="window.location.href='mailto:qualityroofingdh@gmail.com'">Email Dan</button>
+<a href="/about"><button class="secondary-button" id="btn-dan">About Us</button></a>
+</div>
+</div>
+
+<script>
+  // Dan Experience Years
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const startYear = 1992; 
+    const currentYear = new Date().getFullYear(); 
+    const yearsExperience = currentYear - startYear; 
+  
+    document.getElementById('years-experience').textContent = yearsExperience; 
+  });
+
+  //Anti-spam email encoding
+
+  var encEmail = "cXVhbGl0eXJvb2ZpbmdkaEBnbWFpbC5jb20=";
+const form = document.getElementById("contact");
+form.setAttribute("href", "mailto:".concat(atob(encEmail)));
+</script>

@@ -1,0 +1,98 @@
+---
+const { galPic, locationTag, shingleColor, shingleSwatch, beforeGal } = Astro.props;
+---
+
+<div class="pic-container" style={`background-image: url(${galPic})`}>
+    <div class="shingle-pop">
+        <div class="shingle-prev">
+        <img class="swatch" src={shingleSwatch}>
+        </div>
+        {shingleColor}
+    </div>
+    <div class="location">
+            <svg class="location-tag" 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="1.2rem" 
+                height="1.2rem" 
+                viewBox="0 0 24 24">
+            <path fill-opacity="80%" 
+                fill="white" 
+                d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/>
+            </svg>
+           {locationTag}
+        </div>
+</div>
+
+<script>
+    
+</script>
+
+<style>
+
+    .shingle-pop, .shingle-prev {
+        z-index:2;
+        display: flex;
+        align-items:center;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0px 1px 10px #000000;
+        align-items:center;
+    }
+
+    .shingle-prev {
+        object-position: center;
+        object-fit: cover;
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.5em;
+        overflow:hidden;
+        border: 1px solid rgba(245, 245, 245, 0.80);
+        border-radius: 2px;
+    }
+
+    .swatch {
+        scale: 2;
+        filter:saturate(2);
+    }
+
+    .pic-container {
+        width: 20rem;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        filter: saturate(1);
+        display: flex;
+        justify-content: space-between ;
+        align-items:end;
+        position: relative;
+        transition: filter 0.3s;
+        border-radius: 1rem;
+    }
+
+    .location, .shingle-pop {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+     .location {
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        z-index:2;
+        text-shadow: 0px 1px 10px #000000;
+        align-items:center;
+        
+}  
+
+.location, .location-tag {
+    display: flex;
+    align-items:center;
+}
+
+.location-tag {
+    -webkit-filter: drop-shadow( 0px 1px 10px #000000);
+  filter: drop-shadow( 0px 1px 10px #000000);
+}
+
+</style>

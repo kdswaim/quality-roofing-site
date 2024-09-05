@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import '../styles/responsive.css';
+---
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+    <div class="hamburger" tabindex="0">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a class="last-nav" href="/contact/">Contact</a></li>
+            </li>
+        </ul>
+        <div class="logo">
+            <a href="/" aria-label="Quality Roofing of Indiana, LLC">
+                <img
+                    alt="Quality Roofing of Indiana, LLC"
+                    class="logo"
+                    src="/Logos/QualityRoofingTransparent - 1.png"
+                    style="width:auto;max-height:3rem; 
+    -webkit-filter: drop-shadow(5px 5px 5px #141414); 
+    filter: drop-shadow(5px 5px 5px #141414);"
+                />
+            </a>
+        </div>
+        <div class="telephone">
+            <div class="phone-icon">
+                <a href="tel:812-870-0447"
+                    ><svg id="phone-btn-numb" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"
+                        ><path
+                            id="p-icon"
+                            fill="var(--color-cta-btn)"
+                            fill-rule="evenodd"
+                            d="m16.1 13.359l.456-.453c.63-.626 1.611-.755 2.417-.317l1.91 1.039c1.227.667 1.498 2.302.539 3.255l-1.42 1.412c-.362.36-.81.622-1.326.67c-1.192.111-3.645.051-6.539-1.643zm-5.91-5.876l.287-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.065 1.14.453 3.22 2.149 5.776z"
+                            clip-rule="evenodd"></path><path
+                            fill="var(--color-cta-btn)"
+                            d="M12.063 11.497c-2.946-2.929-1.88-4.008-1.873-4.015l-4.039 4.04c.667 1.004 1.535 2.081 2.664 3.204c1.14 1.134 2.26 1.975 3.322 2.596L16.1 13.36s-1.082 1.076-4.037-1.862"
+                            opacity="0.6"></path></svg
+                    >
+                </a>
+                <div class="phone-number">(812) 870-0447</div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // *NavBar Functionality
+
+const hamb = document.querySelector('.hamburger');
+const navBar = document.querySelector('.navbar');
+const lastNav = document.querySelector('.last-nav');
+
+hamb.addEventListener('focus', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+hamb.addEventListener('click', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+lastNav.addEventListener('blur', () => {
+    navBar.classList.toggle('active')
+    hamb.classList.toggle('rotate90')
+});
+</script>
