@@ -310,16 +310,16 @@ width: 100%;
     display: none;
   }
 
-  .whyus-comp-container {
+  .quality-section,#meet-dan {
+    display: none;
+  }
+
+  .whyus-comp-contain {
     padding: 1rem 0;
   }
 
   .whyus-container {
     padding: 1rem;
-  }
-
-  .quality-section,#meet-dan {
-    display: none;
   }
 
   #dan-container {
