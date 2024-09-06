@@ -5,7 +5,7 @@ const { galPic, locationTag, shingleColor, shingleSwatch, beforeGal } = Astro.pr
 <div class="pic-container" style={`background-image: url(${galPic})`}>
     <div class="shingle-pop">
         <div class="shingle-prev">
-        <img class="swatch" src={shingleSwatch}>
+        <img loading="lazy" class="swatch" src={shingleSwatch}>
         </div>
         {shingleColor}
     </div>

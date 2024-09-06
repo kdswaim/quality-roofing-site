@@ -2,7 +2,7 @@
 const { colorName, backgroundImage, alt } = Astro.props;
 ---
 <div class="card-item">
-  <img src={backgroundImage} alt={alt} class="card-image" />
+  <img loading="lazy" src={backgroundImage} alt={alt} class="card-image" />
 <p class="color-name">{colorName}</p>
 </div>
 
