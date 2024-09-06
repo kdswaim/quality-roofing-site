@@ -298,7 +298,7 @@ width: 100%;
   }
 
   #meet-dan {
-    display: none;
+    display: none!important;
   }
 
   .whyus-dan-container {
