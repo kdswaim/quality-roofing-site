@@ -250,13 +250,6 @@ section {
 
     /* Contact Form */
 
-    #desktop-hero-form-view {
-      display: none;
-    }
-
-    .desktop-hero-badges {
-      display: none;
-    }
     .landing-form {
       width: 100%;
       background-color: var(--color-bg);
@@ -534,49 +527,3 @@ img.dan-pic {
       justify-content: center;
       align-items: center;
   }
-  
-
-/* Media and Figma Notes
-!!!!!Pick Your 6 Breakpoints!!!!!
-
-Small Android (360 x 640)
-
-Text Sizes:
-Body Text: 16
-Headings: 24px
-Image/Logo Sizes:
-Logo: 48px height
-Images: Full-width with padding inside the margins
-Button Sizes:
-Height: 44px
-Width: Full-width minus margins
-
-##########
-
-iPhone 15/16 pro max (430 x 932)
-
-Body Text: 16px
-Headings: 26px
-Image/Logo Sizes:
-Logo: 56px height
-Images: Full-width with padding inside the margins
-Button Sizes:
-Height: 48px
-Width: Full-width minus margins
-
-#############
-
-iPad Pro 11 (1194 x 834)
-
-Text Sizes:
-Body Text: 18px
-Headings: 32px
-Image/Logo Sizes:
-Logo: 72px height
-Images: Full-width with padding inside the margins
-Button Sizes:
-Height: 50px
-Width: Content-based with padding (e.g., 16px padding on each side)
-
-################
-*/

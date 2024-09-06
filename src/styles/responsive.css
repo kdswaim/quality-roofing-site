@@ -228,6 +228,16 @@ width: 100%;
 
 }/* end 800px */
 
+@media screen and (max-width:1020px) {
+  #desktop-hero-form-view {
+    display: none;
+  }
+
+  .desktop-hero-badges {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1020px) {
 
 /* Hero/Landing Form */
@@ -236,9 +246,9 @@ width: 100%;
   display: none;
 }
 
-#desktop-hero-form-view {
+/* #desktop-hero-form-view {
   display: block;
-}
+} */
 
     .contact-form-desktop {
       margin: 0 auto;
@@ -261,9 +271,7 @@ width: 100%;
     /* Atlas */
 
 #header-container {
-  /* display: flex; */
   justify-content: center!important;
-  /* gap: 0.5rem; */
   align-items: center!important;
 }
 
