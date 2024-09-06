@@ -300,6 +300,10 @@ width: 100%;
     width: 100%;
   }
 
+  #meet-dan {
+    display: none;
+  }
+
   .whyus-dan-container {
     display: flex!important;
     flex-direction: row!important;
