@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import "../styles/responsive.css";
+
+
+const year = new Date().getFullYear()
 ---
 
 <footer>
@@ -48,7 +51,7 @@ import "../styles/responsive.css";
 
 <div class="copyright">
     <small>
-    Copyright 2024 &#169; Quality Roofing of Indiana, LLC, all Rights Reserved.
+    Copyright <span id="footer-year">{year}</span> &#169; Quality Roofing of Indiana, LLC, all Rights Reserved.
     </small>
     </div>
 <div id="legal-links">
@@ -64,3 +67,7 @@ import "../styles/responsive.css";
 </div>
 
 </footer>
+
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>
