@@ -1,0 +1,32 @@
+* {
+    outline: none!important;
+}
+
+.before,
+.after {
+  margin: 0;
+}
+
+.before figcaption,
+.after figcaption {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  color: #282828;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 100%;
+  font-family: calistoga;
+  font-size: 1rem;
+}
+
+.before figcaption {
+  top: 2rem;
+  left: 10px;
+}
+
+.after figcaption {
+    top: 28rem;
+    left: 10px;
+}

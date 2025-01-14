@@ -10,6 +10,7 @@ import DanTheRoofingMan from "../components/DanTheRoofingMan.astro";
 import WhyUsCollapsible from "../components/WhyUsCollapsible.astro";
 import "../styles/global.css";
 import "../styles/responsive.css";
+import BeforeAfterCarousel from "../components/BeforeAfterCarousel.jsx";
 ---
 
 <Layout
@@ -79,9 +80,9 @@ import "../styles/responsive.css";
 <section class="before-after-gallery">
   <div class="before-after-container">
 <h2 class="dark-lines" id="before-after-header">A Real Difference</h2>
+
 <div id="widget-container">
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <div class="elfsight-app-52ea9985-ee70-48dc-8cf9-eca820b0bdb5" data-elfsight-app-lazy></div>
+  <BeforeAfterCarousel client:load />
 </div>
   <div id="fu-guys">
   <a href="gallery"><button class="secondary-button" id="slider-btn">See Gallery</button></a>
@@ -93,10 +94,16 @@ import "../styles/responsive.css";
 
 <section class="reviews">
   <h2 class="review-header">Homeowner-Approved</h2>
+
+  <div id="widget-container">
+
+  </div>
+
   <div id="widget-container"> <!-- Remove when built -->
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-8acd8bad-daa6-40ef-ae31-47ac871e9fb8" data-elfsight-app-lazy >
     </div>
+
   </div>
   <div id="fu-guys-gr">
   <a href="/contact"><button class="cta-button" id="btn-reviews">Give Us A Call</button></a>
