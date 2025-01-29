@@ -1,4 +1,5 @@
 ---
+import DanTheRoofingMan from "../components/DanTheRoofingMan.astro";
 import Layout from "../layouts/layout.astro";
 ---
 
@@ -35,6 +36,22 @@ import Layout from "../layouts/layout.astro";
 <div class="button-container" style="text-align: center;padding: 0 1rem 0 1rem;">
 <a href="/contact"><button class="cta-button" style="width:100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Contact Us</button></a>
 </div>
+</div>
+</section>
+
+<section id="danBlurbAndBreakfastBribe">
+    <!-- Add dan's bio and breakfast bribe stuff with links to Kevin's remixes side by side, like on index page -->
+<div class="bfast-bribe-dan">
+<h1 class="breakfast-bribe" style="font-size:2rem;">Proud Sponsor of &nbsp;<i>HI-99 WTHI's The Breakfast Bribe</i></h2>
+<iframe src="https://omny.fm/shows/kevins-re-mix/playlists/podcast/embed?style=artwork&amp;image=1&amp;share=1&amp;download=1&amp;description=1&amp;subscribe=1&amp;playlistimages=1&amp;playlistshare=1&amp;foreground=353535&amp;background=FFFFFF&amp;highlight=006dae" 
+width="90%" 
+height="500" 
+frameborder="0" 
+title="Kevin's Re-Mix"
+class="pod-player">
+</iframe>
+
+<DanTheRoofingMan />
 </div>
 </section>
 
@@ -137,6 +154,17 @@ import Layout from "../layouts/layout.astro";
 
         .about-description {
             padding: 1rem 1rem;
+        }
+
+        .breakfast-bribe {
+            justify-content: center;
+        }
+
+        .pod-player {
+            border-radius: 25px;
+            padding: 1rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     #quality-companies {
