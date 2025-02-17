@@ -16,7 +16,7 @@ const Pagination = () => {
     }
   }, [carouselContext]);
 
-  return <span><p class="text-base font-serif">{currentSlide}/4</p></span>;
+  return <span><p className="text-base font-serif">{currentSlide}/4</p></span>;
 };
 
 const Carousel = () => {
