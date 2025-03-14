@@ -10,7 +10,7 @@ const Pagination = () => {
 
   useEffect(() => {
     if (carouselContext) {
-      const onChange = () => setCurrentSlide(carouselContext.state.currentSlide + 1);
+      const onChange = () => setCurrentSlide(carouselContext.state.currentSlide +1);
       carouselContext.subscribe(onChange);
       return () => carouselContext.unsubscribe(onChange);
     }
@@ -31,11 +31,17 @@ const carouselContext = useContext(CarouselContext);
 
 useEffect(() => {
   if (carouselContext) {
-    const onChange = () => setCurrentSlide(carouselContext.state.currentSlide);
-    carouselContext.subscribe(onChange);
-    return () => carouselContext.unsubscribe(onChange);
+    const updateSlide = () => {
+      setCurrentSlide(carouselContext.state.currentSlide);
+    };
+    
+    carouselContext.subscribe(updateSlide);
+    setCurrentSlide(carouselContext.state.currentSlide);
+    
+    return () => carouselContext.unsubscribe(updateSlide);
   }
 }, [carouselContext]);
+
 
   return (
     <CarouselProvider
@@ -144,11 +150,11 @@ useEffect(() => {
       </Slider>
 
       <div className="flex justify-between p-4 align-middle">
-        <div id="pagination" class=" ">
+        <div id="pagination">
           <Pagination />
         </div>
 
-        <div id="slide-description" class="">
+        <div id="slide-description">
         <p className="font-serif text-base">{descriptions[currentSlide]}</p>
         </div>
         
