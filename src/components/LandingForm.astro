@@ -1,0 +1,225 @@
+<!-- ---
+import "../styles/global.css";
+// export const prerender = true;
+---
+
+<section class="form-container">
+    <h4 style="color:#282828;">Get a Free Estimate</h4>
+    <p class="form-tagline">We'll call you back.</p>
+
+      <form 
+      action="https://api/web3forms.com/submit"
+      method="POST" 
+      id="form" 
+      class="needs-validation"
+      data-astro-reload
+      novalidate
+      >
+
+       <input type="hidden" name="access_key" value="993f6c90-ee6a-4715-8141-58c4df3e5a54">
+
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+      <input type="hidden" name="subject" value="New Lead for Quality Roofing">
+
+      <div class="form-group">
+        <input type="text" 
+        aria-label="name" 
+        name="name" 
+        placeholder="Name" 
+        required />
+        <div class="error-message" id="nameError">
+          Please enter your name.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" 
+        aria-label="phone-contact-method" 
+        id="contact-option" 
+        name="phone" 
+        placeholder="Phone Number" 
+        />
+        <div class="error-message" id="contactError">
+          Please enter a method of contact.
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" 
+        aria-label="email-contact-method" 
+        id="contact-option" 
+        name="email" 
+        placeholder="Email Address"
+        />
+        <div class="error-message" id="contactError">
+          Please enter a method of contact.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <select id="service-area" aria-label="service area" name="serviceArea" required>
+          <option value="" disabled selected>Select your service area</option>
+          <option value="vigo">Vigo County</option>
+          <option value="parke">Parke County</option>
+          <option value="vermillion">Vermillion County</option>
+          <option value="sullivan">Sullivan County</option>
+          <option value="greene">Greene County</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error-message" id="areaError">
+          Please select a service area.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <select aria-label="service requested" id="service-requested" name="serviceRequested" required>
+          <option value="" disabled selected>Select the service you need</option>
+          <option value="new-installation">New Installation</option>
+          <option value="replacement">Replacement</option>
+          <option value="repair">Repair</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea 
+        aria-label="describe sevice if other" 
+        id="service-requested-other" 
+        name="serviceRequestedOther" 
+        placeholder="Please describe your service request if other."
+        style="border-radius: 0 0 0 1rem"></textarea>
+        <div class="error-message" id="serviceError">
+          Please select a service of interest.
+        </div>
+      </div>
+  
+      <div class="form-submit">
+        <button class="cta-button" style="width: 100%" type="submit"><input type="submit" value="Submit" aria-label="submit"></button>
+      </div>
+      <div id="result"></div>
+    </form>
+  </section>
+
+
+<style>
+
+  .form-container {
+    width: 100%;
+    padding: 2rem;
+    background: rgba(245, 245, 245, 0.7);
+    text-align: center;
+    box-shadow: 0rem 0.5rem 0.5rem 0rem #000000a1;
+    display: flex column;
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    object-fit: contain;
+    max-width: 25rem;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid {
+    display: block;
+  }
+
+  .form-tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-left: 0;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0 1rem 0 0;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: rgba(245, 245, 245, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+    margin-left: 0;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    background: rgba(245, 245, 245, 0.7);
+  }
+
+  input[type="submit"] {
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+</style>
+
+<script>
+
+window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+    };
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    form.classList.add("was-validated");
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Sending...";
+    if (!form.checkValidity()) {
+      form.querySelectorAll(":invalid")[0].focus();
+      return;
+    }
+    
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          alert('Form submitted successfully! We will return your message soon.');
+          // result.classList.add("text-green-500");
+          result.innerHTML = json.message;
+        } else {
+          alert('Error submitting form; please double-check your responses.')
+          console.log(response);
+          // result.classList.add("text-red-500");
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        form.classList.remove("was-validated");
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+},
+{ once: true },
+);
+  </script> -->
