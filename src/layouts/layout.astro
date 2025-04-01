@@ -4,8 +4,6 @@ import '../styles/responsive.css';
 import Footer from '../components/Footer.astro';
 import MobileHeader from '../components/MobileHeader.astro';
 import DesktopHeader from '../components/DesktopHeader.astro';
-import DesktopHero from '../components/DesktopHero.astro';
-import Banner from '../components/Banner.astro';
 
 interface Props {
     title: string;
@@ -14,32 +12,47 @@ interface Props {
 const { title } = Astro.props;
 ---
 
+<!-- TODO: Move responsive styles to their own stylesheet, link rel to -->
+
 <!doctype html>
 <html lang="en">
-    <!--Heading Font: Calistoga -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet" />
-    <!--Secondary Font: IBM Plex Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    <!--tab icon and seo info -->
-    <link rel="icon" type="image/svg+xml" href="Logos/qr-favicon.png" />
+<meta charset="UTF-8">
+<head>
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!--tab icon and seo info -->
+<link rel="preload" as="image" href="Logos/qr-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://www.qualityroofingofindiana.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quality Roofing Services in Terre Haute, IN | Local Roof Replacement & Repair">
+<meta property="og:description" content="50+ years of roofing expertise. Call now for a free estimate.">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/592bffdd-93ea-4e93-8640-af2001092c65.png?token=Q2Elsvgox5lrEasmpu29OpjQW25YKkXVBDTIOWf4Z18&height=533&width=1200&expires=33279536964">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="qualityroofingofindiana.com">
+<meta property="twitter:url" content="https://www.qualityroofingofindiana.com">
+<meta name="twitter:title" content="Quality Roofing Services in Terre Haute, IN | Local Roof Replacement & Repair">
+<meta name="twitter:description" content="50+ years of roofing expertise. Call now for a free estimate.">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/592bffdd-93ea-4e93-8640-af2001092c65.png?token=Q2Elsvgox5lrEasmpu29OpjQW25YKkXVBDTIOWf4Z18&height=533&width=1200&expires=33279536964">
+
 <!-- web analytics! -->
-    <script data-goatcounter="https://quality-roofing.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://quality-roofing.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+</head>
 
     <body>
         <div id="mobile-holder">
         <MobileHeader/>
-    </div>
-    <div id="desktop-holder">
+        </div>
+        <div id="desktop-holder">
         <DesktopHeader/>
-    </div>
+        </div>
         <main class="main-content" id="main">
             <slot />
         </main>
