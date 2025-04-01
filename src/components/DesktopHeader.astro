@@ -35,7 +35,7 @@ filter: drop-shadow(5px 5px 5px #141414);"
         </nav>
         
         <div class="telephone">
-                <a href="tel:812-870-0447"><span style="color:#1898F3"><strong>812-870-0447</strong></span></a>
+                <a href="tel:812-870-0447"><span id="tel-num" style="color:#1898F3">812-870-0447</span></a>
             </div>
 </header>
 <Banner/>
@@ -110,6 +110,15 @@ flex: 1;
   display: flex;
   align-items:start;
 justify-content: center;
+font-family:calistoga;
+}
+
+#tel-num {
+  transition: color 0.3s ease;
+}
+
+#tel-num:hover {
+  color: white !important;
 }
 
 .phone-number {
@@ -121,6 +130,11 @@ justify-content: center;
   .telephone a{
 display: flex;
 padding: 0.5rem 0.5rem 0 0.5rem;
+color: 
+  }
+
+  .telephone a:hover{
+color: white!important;
   }
 
 .phone-icon-svg {
