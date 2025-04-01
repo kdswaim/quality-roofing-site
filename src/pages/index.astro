@@ -32,54 +32,59 @@ import BeforeAfterCarousel from "../components/BeforeAfterCarousel.jsx";
     <DesktopHero />
   </section>
 
-
     <!-- Services Section -->
     <section class="services-section">
       <h2 class="dark-lines" id="service-header">Skilled & Courteous</h2>
       <div class="service-container">
     <Services />
-    <a href="/services" id="service-button-padding"><button class="secondary-button" id="service-button">View Our Services</button></a>
+    <a href="/services" id="service-button-padding">
+      <button class="secondary-button" id="service-button">
+        View Our Services
+      </button>
+    </a>
   </div>
     </section>
 
     <!-- ATLAS ROOFING SECTION -->
 
-    <section class="atlas-section">
+  <section class="atlas-section">
     <Atlas />
-    </section>
+  </section>
 
 <!-- WHY US SECTION -->
 
 <section class="quality-section">
   <div class="quality-content">
-<WhyUsSection />
-</div>
+    <WhyUsSection />
+  </div>
 </section>
 
 <section aria-label="About Us" id="desktop-whyus-dan-view">
     <div class="whyus-dan-container">
-  <div class="whyus-comp-contain">
-    <h2 class="desktop-q-header">Choose Quality</h2>
-    <p class="desktop-quality-description"><strong>Our qualified team has over 50 years of experience.</strong><br/>Quality Roofing of Indiana, LLC is a local family-owned and operated roofing company ready to help with your next residential or commercial roofing project.</p>
-    <WhyUsCollapsible/>
+      <div class="whyus-comp-contain">
+        <h2 class="desktop-q-header">Choose Quality</h2>
+        <p class="desktop-quality-description"><strong>Our qualified team has over 50 years of experience.</strong><br/>Quality Roofing of Indiana, LLC is a local family-owned and operated roofing company ready to help with your next residential or commercial roofing project.</p>
+          <WhyUsCollapsible/>
+      </div>
+    <div class="desktop-dan-container">
+      <DanTheRoofingMan/>
+    </div>
   </div>
-  <div class="desktop-dan-container">
-<DanTheRoofingMan/>
-</div>
-</div>
 </section>
 
 <!-- SECTION: Dan -->
 
 <section id="meet-dan">
-<DanTheRoofingMan/>
+  <DanTheRoofingMan/>
 </section>
 
 <!-- SECTION: Before & After -->
 
 <section class="before-after-gallery">
   <div class="before-after-container">
-<h2 class="dark-lines" id="before-after-header">A Real Difference</h2>
+    <h2 class="dark-lines" id="before-after-header">
+      A Real Difference
+    </h2>
 
 <div id="widget-container">
   <BeforeAfterCarousel client:load />
@@ -94,10 +99,6 @@ import BeforeAfterCarousel from "../components/BeforeAfterCarousel.jsx";
 
 <section class="reviews">
   <h2 class="review-header">Homeowner-Approved</h2>
-
-  <div id="widget-container">
-
-  </div>
 
   <div id="widget-container"> <!-- Remove when built -->
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer async></script>
