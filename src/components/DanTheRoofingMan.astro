@@ -22,7 +22,7 @@ import "../styles/global.css";
 </div>
 </div>
 
-<script>
+<script client: load>
   // Dan Experience Years
   
   document.addEventListener('DOMContentLoaded', function() {
@@ -38,4 +38,6 @@ import "../styles/global.css";
   var encEmail = "cXVhbGl0eXJvb2ZpbmdkaEBnbWFpbC5jb20=";
 const form = document.getElementById("contact");
 form.setAttribute("href", "mailto:".concat(atob(encEmail)));
+
+
 </script>
